@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+.search{
+  display: inline-block;
+ 
+}
+.list{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 2em;
+  }
+  
+  .box :first-child {
+      align-self: center;
+  }
