@@ -21,7 +21,8 @@ export const Add = ({ add }) => {
     const [Date, setDate] = useState('');
     const [image, setImage] = useState('');
     const [Rating, setRating] = useState('1');
-
+const [desc, setDesc] = useState('');
+const [trailer, setTrailer] = useState('');
     function openModal() {
         setIsOpen(true);
     }
@@ -70,6 +71,16 @@ export const Add = ({ add }) => {
                     </Form.Group>
 
                     <StarRating handleRating={handleRating} rat={Rating} required />
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Trailer</Form.Label>
+                        <Form.Control type="url" value={trailer} onChange={(e) => setTrailer(e.target.value)}  required/>
+
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Description</Form.Label>
+                        <Form.Control type="text" value={desc} onChange={(e) => setDesc(e.target.value)}  required/>
+
+                    </Form.Group>
                     <Button variant="primary" type="submit" class="btn btn-secondary btn-lg btn-block">
                         Confirm
                     </Button>
